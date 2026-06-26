@@ -31,39 +31,39 @@ const publications = [
   {
     title:
       "A Blockchain-Enabled Process Adaptation Framework for E-Waste Resource Recovery",
+    url: "https://link.springer.com/chapter/10.1007/978-981-95-9230-2_1",
     venue: "SDLT 2025",
     venueDetail:
       "9th Symposium on Distributed Ledger Technology, Melbourne, Australia",
     authors: "I. Samiha, R. Mukta, Md. S. A. Forhad",
     publisher: "Springer CCIS",
-    status: "In Press",
   },
   {
     title:
       "Blockchain-Based Solutions for E-Waste Management: A Review of Opportunities and Challenges",
+    url: "https://ieeexplore.ieee.org/document/10985377",
     venue: "IATMSI 2025",
     venueDetail:
       "IEEE Int'l Conference on Interdisciplinary Approaches in Technology and Management for Social Innovation, Gwalior, India",
     authors: "I. Samiha et al.",
-    doi: "10.1109/IATMSI64286.2025.10985377",
   },
   {
     title:
       "Multi-Blockchain Backup & Restore System with Zero-Knowledge Proofs (ZKPs)",
+    url: "https://ieeexplore.ieee.org/document/11160331",
     venue: "NCIM 2025",
     venueDetail:
       "IEEE 2nd Int'l Conference on Next-Generation Computing, IoT, and Machine Learning",
     authors: "I. Samiha et al.",
-    doi: "10.1109/NCIM65934.2025.11160331",
   },
   {
     title:
       "A Hybrid Deep Learning Approach for Dialect-Specific Sentiment Analysis of Bangla Regional Linguistics",
+    url: "https://ieeexplore.ieee.org/document/11160009",
     venue: "NCIM 2025",
     venueDetail:
       "IEEE 2nd Int'l Conference on Next-Generation Computing, IoT, and Machine Learning",
     authors: "I. Samiha et al.",
-    doi: "10.1109/NCIM65934.2025.11160009",
   },
   {
     title:
@@ -73,6 +73,23 @@ const publications = [
       "Int'l Conference on AI and Cognitive Science for Emerging Technologies, Marrakech, Morocco",
     authors: "I. Samiha et al.",
     status: "In Press",
+  },
+  {
+    title:
+      "Venture: A Mosquito Disease Prevention Assistant Smartphone Application with Disease Symptom Checking, Specialist Support, Awareness Features",
+    url: "https://ieeexplore.ieee.org/abstract/document/11295605",
+    venue: "IEEE",
+    venueDetail: "IEEE Conference",
+    authors: "I. Samiha et al.",
+  },
+  {
+    title:
+      "A Feasibility Study of Hybrid Hydrokinetic and Solar Power Generation at Bandarban Hill Tracts for Off-Grid Communities",
+    url: "https://ieeexplore.ieee.org/abstract/document/11013980",
+    venue: "ECCE 2025",
+    venueDetail:
+      "4th Int'l Conference on Electrical, Computer and Communication Engineering",
+    authors: "I. Samiha et al.",
   },
 ];
 
@@ -155,7 +172,18 @@ export default function Research() {
                       {index + 1}
                     </div>
                     <div className="flex-1">
-                      <p className="font-bold text-purple-900 mb-1">{pub.title}</p>
+                      {pub.url ? (
+                        <a
+                          href={pub.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-bold text-purple-900 hover:text-purple-600 hover:underline transition-colors duration-200 mb-1 block"
+                        >
+                          {pub.title}
+                        </a>
+                      ) : (
+                        <p className="font-bold text-purple-900 mb-1">{pub.title}</p>
+                      )}
                       <p className="text-sm text-gray-600 mb-1">{pub.authors}</p>
                       <p className="text-sm text-purple-700">
                         <span className="font-semibold">{pub.venue}</span> — {pub.venueDetail}
@@ -163,14 +191,9 @@ export default function Research() {
                       {pub.publisher && (
                         <p className="text-sm text-gray-600 mt-1">
                           {pub.publisher}
-                          {pub.status && (
-                            <span className="ml-2 text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">
-                              {pub.status}
-                            </span>
-                          )}
                         </p>
                       )}
-                      {!pub.publisher && pub.status && (
+                      {pub.status && (
                         <span className="inline-block mt-1 text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">
                           {pub.status}
                         </span>

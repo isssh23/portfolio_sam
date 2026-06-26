@@ -7,9 +7,17 @@ import { GraduationCap, Award } from "lucide-react";
 
 const educationData = [
   {
+    degree: "MSc in Computer Science and Engineering",
+    institution: "Chittagong University of Engineering and Technology",
+    period: "July 2025 – Present",
+    location: "Chittagong, Bangladesh",
+    icon: GraduationCap,
+  },
+  {
     degree: "BSc in Computer Science and Engineering",
     institution: "Chittagong University of Engineering and Technology",
-    period: "Feb 2020 – Jun 2025",
+    period: "February 2020 – June 2025",
+    location: "Chittagong, Bangladesh",
     grade: "CGPA: 3.72 / 4.00",
     icon: GraduationCap,
   },
@@ -17,6 +25,7 @@ const educationData = [
     degree: "Higher Secondary Certificate (HSC)",
     institution: "Chittagong College",
     period: "2019",
+    location: "Chittagong, Bangladesh",
     grade: "GPA: 5.00 / 5.00",
     icon: Award,
   },
@@ -24,6 +33,7 @@ const educationData = [
     degree: "Secondary School Certificate (SSC)",
     institution: "St. Scholastica's Girls' High School, Chittagong",
     period: "2017",
+    location: "Chittagong, Bangladesh",
     grade: "GPA: 5.00 / 5.00",
     icon: Award,
   },
@@ -67,8 +77,13 @@ export default function Education() {
                     {edu.institution}
                   </p>
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
-                    <p className="text-gray-600">{edu.period}</p>
-                    <p className="text-purple-600 font-semibold">{edu.grade}</p>
+                    <div>
+                      <p className="text-gray-600">{edu.period}</p>
+                      <p className="text-gray-500 text-sm">{edu.location}</p>
+                    </div>
+                    {edu.grade && (
+                      <p className="text-purple-600 font-semibold">{edu.grade}</p>
+                    )}
                   </div>
                 </div>
               </div>
