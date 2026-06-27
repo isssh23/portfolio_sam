@@ -198,11 +198,7 @@ export default function Research() {
                           {pub.status}
                         </span>
                       )}
-                      {pub.doi && (
-                        <p className="text-xs text-gray-500 mt-1">
-                          DOI: {pub.doi}
-                        </p>
-                      )}
+
                     </div>
                   </div>
                 </motion.div>
