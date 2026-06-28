@@ -16,7 +16,7 @@ export default function Hero() {
 
           {/* Left — About Me */}
           <motion.div
-            className="flex-1 text-center lg:text-left space-y-4"
+            className="flex-1 text-center lg:text-left space-y-4 order-2 lg:order-1"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -63,7 +63,7 @@ export default function Hero() {
 
           {/* Right — Profile picture on top, hero content below */}
           <motion.div
-            className="flex-shrink-0 flex flex-col items-center gap-8"
+            className="flex-shrink-0 flex flex-col items-center gap-8 order-1 lg:order-2"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
