@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, Phone, Linkedin, Github, MapPin } from "lucide-react";
+import { Mail, Phone, Linkedin, Github, MapPin, GraduationCap } from "lucide-react";
 
 const contactInfo = [
   {
@@ -29,6 +29,12 @@ const contactInfo = [
     label: "GitHub",
     value: "github.com/isssh23",
     href: "https://github.com/isssh23",
+  },
+  {
+    icon: GraduationCap,
+    label: "Google Scholar",
+    value: "Google Scholar Profile",
+    href: "https://scholar.google.com/citations?view_op=search_authors&mauthors=ishraq+samiha&hl=en&oi=ao",
   },
   {
     icon: MapPin,

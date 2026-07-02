@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, GraduationCap } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -38,6 +38,15 @@ export default function Footer() {
                 aria-label="GitHub"
               >
                 <Github size={24} />
+              </a>
+              <a
+                href="https://scholar.google.com/citations?view_op=search_authors&mauthors=ishraq+samiha&hl=en&oi=ao"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-purple-300 transition-colors"
+                aria-label="Google Scholar"
+              >
+                <GraduationCap size={24} />
               </a>
               <a
                 href="tel:+8801795927580"
